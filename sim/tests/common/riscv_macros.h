@@ -102,7 +102,7 @@
 #define INTERRUPT_HANDLER j other_exception /* No interrupts should occur */
 
 #define RVTEST_CODE_BEGIN                                               \
-        .org 0x300,0;                                                   \
+        .org 0x600,0;                                                   \
         MSG_TRAP:                                                       \
         .string "Illegal instruction is detected!";                     \
         .section .text.init;                                            \
