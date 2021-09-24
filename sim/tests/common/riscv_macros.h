@@ -127,7 +127,7 @@ next_iter:                                                              \
         sw a5, 0(a6);   /* write to a6 char for print */                \
         addi a7, a7, 1;                                                 \
         jal x0,next_iter;                                               \
-break_from_loop:
+break_from_loop:                                                        \
         /* if an mtvec_handler is defined, jump to it */                \
         la a4, mtvec_handler;                                           \
         beqz a4, 1f;                                                    \
